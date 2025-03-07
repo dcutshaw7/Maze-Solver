@@ -1,18 +1,14 @@
 from Window_Class import *
 from tkinter import Tk, BOTH, Canvas
+from Cell_Class import *
 
 def main():
     win = Window(800, 600)
-    point1 = Point(400, 300)
-    point2 = Point(400, 600)
-    point3 = Point(35, 600)
-    point4 = Point(84, 320)
-    line = Line(point1, point2)
-    line2 = Line(point3, point4)
-    win.draw_line(line2, "red")
-    win.draw_line(line, "blue")
-
-    
+    test_cell = Cell(win, 50, 100,150, 200)
+    test_cell2 = Cell(win, 300, 400, 500, 600)
+    test_cell.has_bottom_wall = False 
+    test_cell.draw()
+    test_cell2.draw()
     win.wait_for_close()
 
 
