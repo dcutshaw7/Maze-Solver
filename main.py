@@ -4,11 +4,14 @@ from Cell_Class import *
 
 def main():
     win = Window(800, 600)
-    test_cell = Cell(win, 50, 100,150, 200)
-    test_cell2 = Cell(win, 300, 400, 500, 600)
-    test_cell.has_bottom_wall = False 
-    test_cell.draw()
-    test_cell2.draw()
+    cell1 = Cell(win, 100, 200, 300, 400)
+    cell1.has_right_wall = False 
+    cell2 = Cell(win, 450, 500, 550, 600)
+    cell2.has_left_wall = False 
+    cell1.draw()
+    cell2.draw()
+    cell1.draw_move(cell2)
+    
     win.wait_for_close()
 
 
