@@ -2,6 +2,8 @@ from tkinter import Tk, BOTH, Canvas
 from Point_Class import * 
 from Window_Class import * 
 
+
+
 class Cell: 
     def __init__(self, win, x1, y1, x2, y2):
         self.has_left_wall = True
