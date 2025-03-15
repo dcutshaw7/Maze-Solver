@@ -3,6 +3,7 @@ from tkinter import Tk, BOTH, Canvas
 from Cell_Class import *
 from Maze_Class import Maze
 import time 
+import random
 
 def main():
     win = Window(800, 600)
