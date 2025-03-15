@@ -6,7 +6,7 @@ import time
 
 def main():
     win = Window(800, 600)
-    maze = Maze(50, 50, 10, 15, 40, 40, win)
+    maze = Maze(10,15, 10, 12, 10, 10, win)
     time.sleep(5)
     win.wait_for_close()
 
