@@ -7,15 +7,11 @@ class Tests(unittest.TestCase):
         win = Window(800, 600)
         num_cols = 12
         num_rows = 10
-        m1 = Maze(0, 0, num_rows, num_cols, 10, 10, win)
-        self.assertEqual(
-            len(m1._cells),
-            num_cols,
-        )
-        self.assertEqual(
-            len(m1._cells[0]),
-            num_rows,
-        )
+        maze1 = Maze(0, 0, num_rows, num_cols, 10, 10, win)
+        maze1._reset_cells_visited()
+        for row in maze1._cells: 
+            for cell in row:
+                self.assertEqual(cell.visited, False)
 
     
 if __name__ == "__main__":

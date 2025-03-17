@@ -7,7 +7,7 @@ import random
 
 def main():
     win = Window(800, 600)
-    maze = Maze(10,15, 10, 12, 10, 10, win)
+    maze = Maze(40,40, 10, 12, 25, 25, win)
     time.sleep(5)
     win.wait_for_close()
 

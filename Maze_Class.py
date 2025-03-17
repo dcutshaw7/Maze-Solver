@@ -18,8 +18,8 @@ class Maze:
             random.seed(seed) 
 
         self._create_cells()
-        self._break_entrance_and_exit()
         self._break_walls()
+        self._break_entrance_and_exit()
 
     def _create_cells(self):
         self._cells = []
@@ -94,3 +94,10 @@ class Maze:
     def _break_walls(self): 
         self._break_walls_r(0,0)
 
+    def _reset_cells_visited(self): 
+        for row in self._cells: 
+            for cell in row:
+                cell.visited = False
+        
+        
+        
