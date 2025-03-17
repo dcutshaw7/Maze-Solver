@@ -8,6 +8,12 @@ import random
 def main():
     win = Window(800, 600)
     maze = Maze(40,40, 10, 12, 25, 25, win)
+    solved = maze.solve()
+    if solved: 
+        print("Maze Solved!")
+    else: 
+        print("No solution")
+        
     time.sleep(5)
     win.wait_for_close()
 
